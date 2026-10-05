@@ -38,6 +38,15 @@ public class IngestaSensores {
         // Los experimentos son parte de esta misma aplicación.
         //
         ejecutarExperimentosSemanaTres();
+
+        // =====================================================
+        // SEMANA 4 - ORDENAMIENTOS Y COMPARACIÓN DE EFICIENCIA
+        // =====================================================
+        //
+        // BancoDeOrdenamiento NO tiene main.
+        // Los experimentos son parte de esta misma aplicación.
+        //
+        ejecutarExperimentosSemanaCuatro();
     }
 
     /**
@@ -57,6 +66,24 @@ public class IngestaSensores {
         BancoDePruebas.experimentoCuatro();
     }
 
+    /**
+     * Ejecuta las pruebas de la Semana 4 desde el único main
+     * del proyecto.
+     */
+    private static void ejecutarExperimentosSemanaCuatro() {
+        System.out.println();
+        System.out.println("====================================================");
+        System.out.println("       SEMANA 4 - ORDENAMIENTOS Y EFICIENCIA");
+        System.out.println("====================================================");
+        System.out.println();
+
+        BancoDeOrdenamiento.experimentoUno();
+        BancoDeOrdenamiento.experimentoDos();
+        BancoDeOrdenamiento.experimentoTres();
+        BancoDeOrdenamiento.experimentoCuatro();
+        BancoDeOrdenamiento.experimentoCinco();
+    }
+
     private static void imprimirResumenIngesta(
             RepositorioLecturas repositorio) {
 
@@ -71,7 +98,7 @@ public class IngestaSensores {
         System.out.println();
         System.out.println(
                 "PM2.5 promedio (repositorio): "
-                + repositorio.promedioPm25());
+                        + repositorio.promedioPm25());
     }
 
     private static void imprimirPerfilHorario(
@@ -118,7 +145,7 @@ public class IngestaSensores {
                 if (!repositorio.agregar(lectura)) {
                     System.err.println(
                             "ADVERTENCIA: no se pudo almacenar "
-                            + lectura.getIdSensor());
+                                    + lectura.getIdSensor());
                     continue;
                 }
 
